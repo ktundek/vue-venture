@@ -18,8 +18,8 @@ const formatDate = (timestamp: number) => new Date(timestamp * 1000).toLocaleDat
     <h3>{{ formatDate(weather.dt) }}</h3>
     <img :src="getWeatherIcon(weather.weather[0].icon)" :alt="weather.weather[0].description">
     <div class="temperatures">
-      <span class="max">{{ Math.round(weather.temp.max) }}°C</span>
       <span class="min">{{ Math.round(weather.temp.min) }}°C</span>
+      <span class="max">{{ Math.round(weather.temp.max) }}°C</span>
     </div>
     <div class="details">
       <p>{{ weather.weather[0].description }}</p>
