@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue';
-import { getRomeWeather } from '@/services/weatherService';
+import { getAmsterdamWeather } from '@/services/weatherService';
 import type { WeatherData } from '@/services/weatherService';
 import WeatherCard from '@/components/WeatherCard.vue';
 
@@ -10,7 +10,7 @@ const error = ref<string | null>(null);
 
 onMounted(async () => {
   try {
-    weatherData.value = await getRomeWeather();
+    weatherData.value = await getAmsterdamWeather();
   } catch (e) {
     error.value = 'Failed to load weather data';
   } finally {
@@ -22,7 +22,7 @@ onMounted(async () => {
 <template>
   <div class="weather-view">
     <div class="content-container">
-      <h1>Rome Weather Forecast</h1>
+      <h1>Amsterdam Weather Forecast</h1>
       <div v-if="loading" class="loading">Loading weather data...</div>
       <div v-else-if="error" class="error">{{ error }}</div>
       <div v-else class="forecast-grid">
