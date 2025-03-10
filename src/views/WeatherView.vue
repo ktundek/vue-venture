@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { onMounted, ref } from 'vue';
-import { getAmsterdamWeather } from '@/services/weatherService';
-import type { WeatherData } from '@/services/weatherService';
 import WeatherCard from '@/components/WeatherCard.vue';
+import type { WeatherData } from '@/services/weatherService';
+import { getAmsterdamWeather } from '@/services/weatherService';
+import { onMounted, ref } from 'vue';
 
 const weatherData = ref<WeatherData[]>([]);
 const loading = ref(true);
@@ -36,6 +36,7 @@ onMounted(async () => {
 .weather-view {
   flex: 1;
   padding: 2rem;
+  background-color: var(--color-background);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -55,6 +56,7 @@ h1 {
   margin: 2rem 0;
   color: var(--color-heading);
   font-size: 2.5rem;
+  font-weight: 600;
 }
 
 .forecast-grid {
@@ -91,7 +93,11 @@ h1 {
   font-size: 1.2rem;
 }
 
+.loading {
+  color: var(--color-text);
+}
+
 .error {
-  color: #dc3545;
+  color: var(--color-temp-max);
 }
 </style>

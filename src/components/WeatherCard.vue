@@ -31,17 +31,18 @@ const formatDate = (timestamp: number) => new Date(timestamp * 1000).toLocaleDat
 
 <style scoped>
 .weather-card {
-  background: rgba(255, 255, 255, 0.95);
+  background: var(--color-card-bg);
   backdrop-filter: blur(10px);
   border-radius: 15px;
   padding: 1.5rem;
   text-align: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   transition: transform 0.2s;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
   height: 100%;
+  border: 1px solid var(--color-border);
 }
 
 .weather-card:hover {
@@ -56,17 +57,17 @@ const formatDate = (timestamp: number) => new Date(timestamp * 1000).toLocaleDat
 }
 
 .max {
-  color: #ff6b6b;
+  color: var(--color-temp-max);
   font-weight: bold;
 }
 
 .min {
-  color: #4dabf7;
+  color: var(--color-temp-min);
 }
 
 .details {
   font-size: 0.9rem;
-  color: #868e96;
+  color: var(--color-text-soft);
 }
 
 img {
@@ -76,7 +77,8 @@ img {
 }
 
 h3 {
-  font-size: 1rem;
+  font-size: 1.1rem;
   margin-bottom: 0.5rem;
+  color: var(--color-heading);
 }
 </style>
