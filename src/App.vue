@@ -22,18 +22,20 @@ import { RouterLink, RouterView } from 'vue-router'
   display: flex;
   flex-direction: column;
   align-items: center;
+  background: var(--color-background);
 }
 
 header {
   width: 100%;
   padding: 1.5rem;
-  background-color: rgba(255, 255, 255, 0.95);
+  background: var(--color-background);
   border-bottom: 1px solid var(--color-border);
   display: flex;
   justify-content: center;
   position: sticky;
   top: 0;
   z-index: 100;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 nav {
@@ -55,12 +57,12 @@ nav a {
 }
 
 nav a:hover {
-  background-color: var(--color-background-soft);
+  background-color: var(--color-background-mute);
 }
 
 nav a.router-link-active {
   font-weight: 600;
-  color: var(--color-primary);
+  color: var(--color-heading);
   background-color: var(--color-background-mute);
 }
 </style>

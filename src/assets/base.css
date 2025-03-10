@@ -23,30 +23,34 @@
 
 /* semantic color variables for this project */
 :root {
-  --color-background: var(--vt-c-white);
-  --color-background-soft: var(--vt-c-white-soft);
-  --color-background-mute: var(--vt-c-white-mute);
-
-  --color-border: var(--vt-c-divider-light-2);
-  --color-border-hover: var(--vt-c-divider-light-1);
-
-  --color-heading: var(--vt-c-text-light-1);
-  --color-text: var(--vt-c-text-light-1);
+  --color-background: #ffffff;
+  --color-background-soft: #f8f9fa;
+  --color-background-mute: #f1f3f5;
+  --color-heading: #2c3e50;
+  --color-text: #4a4a4a;
+  --color-text-soft: #6c757d;
+  --color-border: #dee2e6;
+  --color-primary: #3498db;
+  --color-card-bg: rgba(255, 255, 255, 0.95);
+  --color-temp-max: #e74c3c;
+  --color-temp-min: #3498db;
 
   --section-gap: 160px;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-background: var(--vt-c-black);
-    --color-background-soft: var(--vt-c-black-soft);
-    --color-background-mute: var(--vt-c-black-mute);
-
-    --color-border: var(--vt-c-divider-dark-2);
-    --color-border-hover: var(--vt-c-divider-dark-1);
-
-    --color-heading: var(--vt-c-text-dark-1);
-    --color-text: var(--vt-c-text-dark-2);
+    --color-background: #1a1a1a;
+    --color-background-soft: #1a1a1a;
+    --color-background-mute: #2d2d2d;
+    --color-heading: #ffffff;
+    --color-text: #e1e1e1;
+    --color-text-soft: #a0a0a0;
+    --color-border: #404040;
+    --color-primary: #5dade2;
+    --color-card-bg: rgba(45, 45, 45, 0.95);
+    --color-temp-max: #ff6b6b;
+    --color-temp-min: #74c0fc;
   }
 }
 
@@ -66,20 +70,9 @@ body {
     color 0.5s,
     background-color 0.5s;
   line-height: 1.6;
-  font-family:
-    Inter,
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    Oxygen,
-    Ubuntu,
-    Cantarell,
-    'Fira Sans',
-    'Droid Sans',
-    'Helvetica Neue',
-    sans-serif;
-  font-size: 15px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+    'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-size: 16px;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
